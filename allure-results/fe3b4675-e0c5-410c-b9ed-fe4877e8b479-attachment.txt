@@ -1,1 +1,0 @@
-{name=Clean Code (Updated Edition), author=Robert C. Martin, published_year=2020, book_summary=Updated edition with new insights on agile practices and clean coding principles}

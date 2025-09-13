@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-13T17:18:04 IST" name="Default suite" finished-at="2025-09-13T17:18:07 IST" duration-ms="3623">
+  <suite started-at="2025-09-13T20:42:28 IST" name="RegressionSuite" finished-at="2025-09-13T20:42:32 IST" duration-ms="4166">
     <groups>
     </groups>
-    <test started-at="2025-09-13T17:18:04 IST" name="Default test" finished-at="2025-09-13T17:18:07 IST" duration-ms="3623">
-      <class name="APITest.BookTest">
-        <test-method is-config="true" signature="setupAuth()[pri:0, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:04 IST" name="setupAuth" finished-at="2025-09-13T17:18:07 IST" duration-ms="3198" status="PASS">
+    <test started-at="2025-09-13T20:42:28 IST" name="Test" finished-at="2025-09-13T20:42:32 IST" duration-ms="4166">
+      <class name="APITest.DefaultTest">
+        <test-method signature="testGetHealth()[pri:0, instance:APITest.DefaultTest@4d1bf319]" started-at="2025-09-13T20:42:31 IST" name="testGetHealth" description="Health Check" finished-at="2025-09-13T20:42:31 IST" duration-ms="104" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupAuth -->
-        <test-method signature="testCreateBook()[pri:1, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testCreateBook" description="Create a new book" finished-at="2025-09-13T17:18:07 IST" duration-ms="95" status="PASS">
+        </test-method> <!-- testGetHealth -->
+        <test-method signature="testSignTokengen()[pri:0, instance:APITest.DefaultTest@4d1bf319]" started-at="2025-09-13T20:42:31 IST" name="testSignTokengen" description="Token Gen SignIn" finished-at="2025-09-13T20:42:32 IST" duration-ms="314" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateBook -->
-        <test-method signature="testGetAllBooks()[pri:2, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testGetAllBooks" description="Fetch all books" finished-at="2025-09-13T17:18:07 IST" duration-ms="47" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetAllBooks -->
-        <test-method signature="testUpdateBook()[pri:3, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testUpdateBook" description="Update Book" finished-at="2025-09-13T17:18:07 IST" duration-ms="56" status="FAIL">
+        </test-method> <!-- testSignTokengen -->
+        <test-method signature="testSignUp()[pri:0, instance:APITest.DefaultTest@4d1bf319]" started-at="2025-09-13T20:42:32 IST" name="testSignUp" description="Signup Test" finished-at="2025-09-13T20:42:32 IST" duration-ms="31" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Book update failed! expected [200] but found [404]]]>
+              <![CDATA[SignUp failed! expected [200] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Book update failed! expected [200] but found [404]
+              <![CDATA[java.lang.AssertionError: SignUp failed! expected [200] but found [400]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1395)
-at APITest.BookTest.testUpdateBook(BookTest.java:74)
+at APITest.DefaultTest.testSignUp(DefaultTest.java:38)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -64,16 +60,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUpdateBook -->
-        <test-method signature="testGetBook()[pri:4, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testGetBook" description="Get Book" finished-at="2025-09-13T17:18:07 IST" duration-ms="27" status="PASS">
+        </test-method> <!-- testSignUp -->
+      </class> <!-- APITest.DefaultTest -->
+      <class name="APITest.BookTest">
+        <test-method is-config="true" signature="setupAuth()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:28 IST" name="setupAuth" finished-at="2025-09-13T20:42:31 IST" duration-ms="3381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupAuth -->
+        <test-method signature="testCreateBook()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testCreateBook" description="Create a new book" finished-at="2025-09-13T20:42:32 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBook -->
+        <test-method signature="testGetAllBooks()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testGetAllBooks" description="Fetch all books" finished-at="2025-09-13T20:42:32 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllBooks -->
+        <test-method signature="testGetBook()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testGetBook" description="Get Book" finished-at="2025-09-13T20:42:32 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetBook -->
-        <test-method signature="testDeleteBook()[pri:5, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testDeleteBook" description="Delete Book" finished-at="2025-09-13T17:18:07 IST" duration-ms="31" status="PASS">
+        <test-method signature="testUpdateBook()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testUpdateBook" description="Update Book" finished-at="2025-09-13T20:42:32 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateBook -->
+        <test-method signature="testDeleteBook()[pri:5, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testDeleteBook" description="Delete Book" finished-at="2025-09-13T20:42:32 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteBook -->
       </class> <!-- APITest.BookTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- RegressionSuite -->
 </testng-results>

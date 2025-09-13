@@ -11,16 +11,19 @@ import org.testng.annotations.Test;
 import base.AuthAPI;
 import groovy.transform.Undefined.EXCEPTION;
 import httpmethod.BookMethod;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import utils.JsonReader;
 
 public class BookTest {
 	BookMethod bookmethod = new BookMethod();
 	Response response = null;
-
+	JsonPath getjson = null;
+    int newcreated_bookid ;
+    
 	@BeforeTest
 //Setup Auth And token
-	public void setupAuth() {
+	public void setupAuth() { 
 		try {
 			Map<String, Object> userData = JsonReader.getJsonData("JsonData/userdata.json");
 			AuthAPI.getOrCreateToken(userData);
@@ -37,6 +40,8 @@ public class BookTest {
 		try {
 			Map<String, Object> bookData = JsonReader.getJsonData("JsonData/bookcreatedata.json");
 			response = bookmethod.createBook(bookData);
+			getjson = response.jsonPath();
+			newcreated_bookid = getjson.getInt("id");
 			Assert.assertEquals(response.getStatusCode(), 200, "Book creation failed!");
 			System.out.println("Book created successfully.");
 		} catch (Exception e) {
@@ -70,7 +75,7 @@ public class BookTest {
 	public void testUpdateBook() {
 		try {
 			Map<String, Object> bookData = JsonReader.getJsonData("JsonData/bookupdatadata.json");
-			response = bookmethod.updateBook(1, bookData);
+			response = bookmethod.updateBook(newcreated_bookid, bookData);
 			Assert.assertEquals(response.getStatusCode(), 200, "Book update failed!");
 			System.out.println("Book updated successfully.");
 		} catch (Exception e) {
@@ -86,7 +91,7 @@ public class BookTest {
 
 	public void testDeleteBook() {
 		try {
-			response = bookmethod.deleteBook(1);
+			response = bookmethod.deleteBook(45);
 			Assert.assertEquals(response.getStatusCode(), 200, "Book delete failed!");
 			System.out.println("Book delete successfully.");
 		} catch (Exception e) {

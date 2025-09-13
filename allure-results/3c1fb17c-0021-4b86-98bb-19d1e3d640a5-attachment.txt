@@ -1,1 +1,0 @@
-{"name":"string","published_year":0,"author":"string","book_summary":"string","id":2}

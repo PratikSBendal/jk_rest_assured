@@ -1,1 +1,0 @@
-{"name":"Clean Code","published_year":2008,"author":"Robert C. Martin","book_summary":"A handbook of agile software craftsmanship","id":14}
