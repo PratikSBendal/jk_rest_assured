@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-13T17:18:04 IST" name="Default suite" finished-at="2025-09-13T17:18:07 IST" duration-ms="3623">
+    <groups>
+    </groups>
+    <test started-at="2025-09-13T17:18:04 IST" name="Default test" finished-at="2025-09-13T17:18:07 IST" duration-ms="3623">
+      <class name="APITest.BookTest">
+        <test-method is-config="true" signature="setupAuth()[pri:0, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:04 IST" name="setupAuth" finished-at="2025-09-13T17:18:07 IST" duration-ms="3198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupAuth -->
+        <test-method signature="testCreateBook()[pri:1, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testCreateBook" description="Create a new book" finished-at="2025-09-13T17:18:07 IST" duration-ms="95" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBook -->
+        <test-method signature="testGetAllBooks()[pri:2, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testGetAllBooks" description="Fetch all books" finished-at="2025-09-13T17:18:07 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllBooks -->
+        <test-method signature="testUpdateBook()[pri:3, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testUpdateBook" description="Update Book" finished-at="2025-09-13T17:18:07 IST" duration-ms="56" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Book update failed! expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Book update failed! expected [200] but found [404]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at APITest.BookTest.testUpdateBook(BookTest.java:74)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateBook -->
+        <test-method signature="testGetBook()[pri:4, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testGetBook" description="Get Book" finished-at="2025-09-13T17:18:07 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBook -->
+        <test-method signature="testDeleteBook()[pri:5, instance:APITest.BookTest@4d14b6c2]" started-at="2025-09-13T17:18:07 IST" name="testDeleteBook" description="Delete Book" finished-at="2025-09-13T17:18:07 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteBook -->
+      </class> <!-- APITest.BookTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
