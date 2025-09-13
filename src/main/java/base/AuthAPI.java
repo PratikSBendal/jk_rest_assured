@@ -34,7 +34,7 @@ public class AuthAPI {
 	// Generate New Token Or If User Alrady exist then Reuse Token
 
 	public static String genrateToken(Map<String, Object> userData) {
-		try {
+		try { 
 
 			// Return Existing Token If Already Generated
 			if (token != null) {

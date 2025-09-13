@@ -13,7 +13,7 @@ public class RequestBuilder {
 
 	// For Token Set
 	public static void setToken(String token) {
-		try {
+		try { 
 			TOKEN = token;
 			System.out.println("Token set successfully.");
 		} catch (Exception e) {
