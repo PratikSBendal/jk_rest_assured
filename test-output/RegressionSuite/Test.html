@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Sep 13 20:42:28 IST 2025</td>
+<td>Started on:</td><td>Mon Sep 15 14:38:20 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4166 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4297 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -80,8 +80,8 @@ function toggleAllBoxes() {
 <td><div><pre>java.lang.AssertionError: SignUp failed! expected [200] but found [400]
 	at APITest.DefaultTest.testSignUp(DefaultTest.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1247938090", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1247938090'><pre>java.lang.AssertionError: SignUp failed! expected [200] but found [400]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace748523772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace748523772'><pre>java.lang.AssertionError: SignUp failed! expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -117,7 +117,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>APITest.DefaultTest@4d1bf319</td></tr>
+<td>APITest.DefaultTest@673fdbce</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -128,40 +128,75 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='APITest.BookTest.testGetBook()'><b>testGetBook</b><br>Test class: APITest.BookTest<br>Test method: Get Book</td>
+<td title='APITest.BookTest.testGetAllBooks()'><b>testGetAllBooks</b><br>Test class: APITest.BookTest<br>Test method: Fetch all books</td>
 <td></td>
 <td>0</td>
-<td>APITest.BookTest@1a4927d6</td></tr>
-<tr>
-<td title='APITest.DefaultTest.testGetHealth()'><b>testGetHealth</b><br>Test class: APITest.DefaultTest<br>Test method: Health Check</td>
-<td></td>
-<td>0</td>
-<td>APITest.DefaultTest@4d1bf319</td></tr>
-<tr>
-<td title='APITest.BookTest.testCreateBook()'><b>testCreateBook</b><br>Test class: APITest.BookTest<br>Test method: Create a new book</td>
-<td></td>
-<td>0</td>
-<td>APITest.BookTest@1a4927d6</td></tr>
-<tr>
-<td title='APITest.BookTest.testDeleteBook()'><b>testDeleteBook</b><br>Test class: APITest.BookTest<br>Test method: Delete Book</td>
-<td></td>
-<td>0</td>
-<td>APITest.BookTest@1a4927d6</td></tr>
+<td>APITest.BookTest@6b09fb41</td></tr>
 <tr>
 <td title='APITest.DefaultTest.testSignTokengen()'><b>testSignTokengen</b><br>Test class: APITest.DefaultTest<br>Test method: Token Gen SignIn</td>
 <td></td>
 <td>0</td>
-<td>APITest.DefaultTest@4d1bf319</td></tr>
+<td>APITest.DefaultTest@673fdbce</td></tr>
 <tr>
-<td title='APITest.BookTest.testGetAllBooks()'><b>testGetAllBooks</b><br>Test class: APITest.BookTest<br>Test method: Fetch all books</td>
+<td title='APITest.BookTest.testGetAllBooksUnauthorized()'><b>testGetAllBooksUnauthorized</b><br>Test class: APITest.BookTest<br>Test method: Unauthrized Token (Negative Test)</td>
 <td></td>
 <td>0</td>
-<td>APITest.BookTest@1a4927d6</td></tr>
+<td>APITest.BookTest@6b09fb41</td></tr>
+<tr>
+<td title='APITest.BookTest.testGetBookNonExistingId()'><b>testGetBookNonExistingId</b><br>Test class: APITest.BookTest<br>Test method: Get book with non-existing ID (Negative Test)</td>
+<td></td>
+<td>0</td>
+<td>APITest.BookTest@6b09fb41</td></tr>
+<tr>
+<td title='APITest.BookTest.testDeleteBook()'><b>testDeleteBook</b><br>Test class: APITest.BookTest<br>Test method: Delete Book</td>
+<td></td>
+<td>0</td>
+<td>APITest.BookTest@6b09fb41</td></tr>
 <tr>
 <td title='APITest.BookTest.testUpdateBook()'><b>testUpdateBook</b><br>Test class: APITest.BookTest<br>Test method: Update Book</td>
 <td></td>
 <td>0</td>
-<td>APITest.BookTest@1a4927d6</td></tr>
+<td>APITest.BookTest@6b09fb41</td></tr>
+<tr>
+<td title='APITest.BookTest.testUpdateBookInvalidId()'><b>testUpdateBookInvalidId</b><br>Test class: APITest.BookTest<br>Test method: Update book with invalid data (Negative Test)</td>
+<td></td>
+<td>0</td>
+<td>APITest.BookTest@6b09fb41</td></tr>
+<tr>
+<td title='APITest.DefaultTest.testGetHealth()'><b>testGetHealth</b><br>Test class: APITest.DefaultTest<br>Test method: Health Check</td>
+<td></td>
+<td>0</td>
+<td>APITest.DefaultTest@673fdbce</td></tr>
+<tr>
+<td title='APITest.BookTest.testGetBook()'><b>testGetBook</b><br>Test class: APITest.BookTest<br>Test method: Get Book</td>
+<td></td>
+<td>0</td>
+<td>APITest.BookTest@6b09fb41</td></tr>
+<tr>
+<td title='APITest.DefaultTest.testGetHealthInvalidEndpoint()'><b>testGetHealthInvalidEndpoint</b><br>Test class: APITest.DefaultTest<br>Test method: Health Check - Invalid Endpoint</td>
+<td></td>
+<td>0</td>
+<td>APITest.DefaultTest@673fdbce</td></tr>
+<tr>
+<td title='APITest.BookTest.testCreateBook()'><b>testCreateBook</b><br>Test class: APITest.BookTest<br>Test method: Create a new book</td>
+<td></td>
+<td>0</td>
+<td>APITest.BookTest@6b09fb41</td></tr>
+<tr>
+<td title='APITest.BookTest.testCreateBookMissingFields()'><b>testCreateBookMissingFields</b><br>Test class: APITest.BookTest<br>Test method: Create book with missing mandatory fields (Negative Test)</td>
+<td></td>
+<td>0</td>
+<td>APITest.BookTest@6b09fb41</td></tr>
+<tr>
+<td title='APITest.DefaultTest.testSignTokengenWrongData()'><b>testSignTokengenWrongData</b><br>Test class: APITest.DefaultTest<br>Test method: Login with Wrong Password</td>
+<td></td>
+<td>0</td>
+<td>APITest.DefaultTest@673fdbce</td></tr>
+<tr>
+<td title='APITest.DefaultTest.testSignUpMissingField()'><b>testSignUpMissingField</b><br>Test class: APITest.DefaultTest<br>Test method: SignUp with Missing Field</td>
+<td></td>
+<td>0</td>
+<td>APITest.DefaultTest@673fdbce</td></tr>
 </table><p>
 </body>
 </html>

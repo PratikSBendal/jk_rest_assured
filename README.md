@@ -34,25 +34,29 @@ Jackson / Gson – JSON parsing utilities
 ✅ Supports TestNG suite execution via testng.xml
 
 🧪 Test Cases
-Default API Tests
 
-User Signup
+Positive Test Cases
 
-User Login & Token Generation
+Default API
 
-Health Check
+Health Check 
 
-Book API Tests
+User Signup (Valid Data) 
 
-Create Book
+User Login (Valid Credentials)
 
-Get All Books
+Books API
 
-Get Book by ID
+Create Book (Valid Data)
 
-Update Book
+Get All Books 
 
-Delete Book
+Get Book by ID (Valid ID)
+
+Update Book (Valid ID & Data) 
+
+Delete Book (Valid ID) 
+
 
 📊 Reporting
 
@@ -67,6 +71,25 @@ Test status (pass/fail)
 After execution, reports are available in:
 
 target/allure-results
+
+Negative Test Cases
+Default API
+
+Health Check (Invalid Endpoint) 
+
+User Signup (Missing Field)
+
+User Login (Wrong Password) → Invalid password should return 401 Unauthorized.
+
+Books API
+
+Get All Book Unauthrized Token 
+
+Create Book (Missing Field) 
+
+Get Book by ID (Invalid ID)
+
+Update Book (Invalid ID)  
 
 
 To generate the report:

@@ -93,4 +93,89 @@ public class DefaultMethod {
 	        }
 	        return response;
 	    }
+	
+	// Wrong End Point Health Check
+	
+	public Response getHealthWronendPoint()
+	{
+		try {
+			response = given()
+	                .spec(RequestBuilder.buildRequest())
+	                .when() 
+	                .get("/heaht")
+	                .then()
+	                .extract().response();
+			 Allure.addAttachment("Wrong Health Endpoint Check Response", response.asString());
+
+		}
+		catch (Exception e)
+		{
+			System.out.println("Exception in getHealthWronendPoint(): " + e.getMessage());
+			if (response != null) {
+				Allure.addAttachment("Get Health Endpoint Check Response Failure", response.asString());
+			} else {
+				Allure.addAttachment("Get Health Endpoint Check Response Failure", "No response captured due to exception.");
+			}
+		}
+		  	
+	     return response;  
+	}
+	
+	// Missing Field in SignUp
+	
+	 public Response missingFiledSignUp(Map<String, Object> body) {
+		 try {
+			 response = given()
+		                .spec(RequestBuilder.buildRequest())
+		                .body(body)
+		                .when()
+		                .post(APIEndPoint.SIGNUP)
+		                .then()
+		                .extract().response();
+		        
+		        Allure.addAttachment("Missing Filed Signup Request", body.toString());
+		        Allure.addAttachment("Missing Filed Signup Response", response.asString());
+		 }
+		 catch (Exception e)
+		 {
+			 System.out.println("Exception in missingFiledSignUp(): " + e.getMessage());
+				if (response != null) {
+					Allure.addAttachment("Missing Filed Signup Response Failure", response.asString());
+				} else {
+					Allure.addAttachment("Missing Filed Signup Response Failure", "No response captured due to exception.");
+				}
+		 }
+	         
+	        return response;
+	    }
+	 
+	 // Wrong User Name or Password
+	 
+		public Response wrongUserLogin(Map<String, Object> body) {
+	        try {
+	        	response = given()
+		                .spec(RequestBuilder.buildRequest())
+		                .body(body)
+		                .when()
+		                .post(APIEndPoint.LOGIN)
+		                .then()
+		                .extract().response();
+		        
+		        Allure.addAttachment("Wrong Login Request", body.toString());
+		        Allure.addAttachment("Wrong Login Response", response.asString());
+		       
+	        }
+	        catch (Exception e)
+	        {
+	        	System.out.println("Exception in wrongUserLogin(): " + e.getMessage());
+				if (response != null) {
+					Allure.addAttachment("Wrong UserLogin Response Failure", response.asString());
+				} else {
+					Allure.addAttachment("Wrong UserLogin Response Failure", "No response captured due to exception.");
+				}
+	        }
+	        return response;
+	    }
+
+	
 }

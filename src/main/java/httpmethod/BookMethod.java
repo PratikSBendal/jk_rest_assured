@@ -141,4 +141,114 @@ public class BookMethod {
 
 		return response;
 	}
+	
+
+// Get All Book Missing with No Token
+	
+	public Response missingTokenGetBook ()
+	{
+	try {
+		response = given()
+				.baseUri("http://localhost:8080")
+				.when()
+				.get(APIEndPoint.BOOKS)
+				.then()
+				.extract().response();
+
+		Allure.addAttachment("Missing Token Get All Books Response", response.asString());
+	} catch (Exception e) {
+		System.out.println("Exception in missingTokenGetBook(): " + e.getMessage());
+		if (response != null) {
+			Allure.addAttachment("Missing Token Get All Books Response Failure", response.asString());
+		} else {
+			Allure.addAttachment("Missing Token Get All Books Response Failure", "No response captured due to exception.");
+		}
+	}
+
+	return response;
+}
+	
+// Missing Mandatory Field 
+	
+	public Response missingFieldCreateBook (Map<String, Object> body)
+	{
+		try {
+			response = given()
+					.spec(RequestBuilder.buildRequest())
+					.body(body)
+					.when()
+					.post(APIEndPoint.BOOKS)
+					.then()
+					.extract().response();
+			
+			
+			Allure.addAttachment("Missing Filed Book Request", body.toString());
+			Allure.addAttachment("Missing Filed Book Response", response.asString());
+		} catch (Exception e) {
+			System.out.println("Exception in missingFieldCreateBook(): " + e.getMessage());
+			if (response != null) {
+				Allure.addAttachment("Missing Filed Book Response Failure", response.asString());
+			} else {
+				Allure.addAttachment("Missing Filed Book Response Failure", "No response captured due to exception.");
+			}
+		}
+
+		return response;
+	
+}
+	
+// Non Existing Book Record 
+	
+   public Response nonExistingBook (int bookid)
+   {
+	   try {
+			response = given()
+					.spec(RequestBuilder.buildRequest())
+					.pathParam("book_id", bookid)
+					.when()
+					.get(APIEndPoint.BOOK_BY_ID)
+					.then()
+					.extract().response();
+           System.out.println(response.asString());
+			Allure.addAttachment("Get Non Existing Book by ID Response", response.asString());
+		} catch (Exception e) {
+			System.out.println("Exception in nonExistingBook(): " + e.getMessage());
+			if (response != null) {
+				Allure.addAttachment("Get Non Existing Book Response Failure", response.asString());
+			} else {
+				Allure.addAttachment("Get Non Existing Book Response Failure", "No response captured due to exception.");
+			}
+		}
+
+		return response;
+   }
+ 
+ // Update Non Existing Book Record
+   
+   public Response nonExistingBookUpdate(int bookid,Map<String, Object> body)
+   {
+	   try {
+			response = given()
+					.spec(RequestBuilder.buildRequest())
+					.pathParam("book_id", bookid)
+					.body(body)
+					.when()
+					.put(APIEndPoint.BOOK_BY_ID)
+					.then()
+					.extract().response();
+
+			Allure.addAttachment("Update Non Exitsing Book Request", body.toString());
+			Allure.addAttachment("Update Non Exitsing Response", response.asString());
+		} catch (Exception e) {
+			System.out.println("Exception in nonExistingBookUpdate(): " + e.getMessage());
+			if (response != null) {
+				Allure.addAttachment("Update Non Exitsing Response Failure", response.asString());
+			} else {
+				Allure.addAttachment("Update Non Exitsing Failure", "No response captured due to exception.");
+			}
+
+		}
+		return response;
+   }
+   
 }

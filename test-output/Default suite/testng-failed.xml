@@ -5,8 +5,16 @@
     <classes>
       <class name="APITest.BookTest">
         <methods>
+          <include name="testUpdateBookInvalidId"/>
+          <include name="testCreateBookMissingFields"/>
+          <include name="testGetBookNonExistingId"/>
+          <include name="testGetAllBooksUnauthorized"/>
+          <include name="testGetBook"/>
           <include name="setupAuth"/>
+          <include name="testGetAllBooks"/>
+          <include name="testUpdateBook"/>
           <include name="testDeleteBook"/>
+          <include name="testCreateBook"/>
         </methods>
       </class> <!-- APITest.BookTest -->
     </classes>

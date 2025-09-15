@@ -1,1 +1,0 @@
-{"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcmF0aWsxNkBnbWFpbC5jb20iLCJleHAiOjE3NTc3NzgxNTJ9.q9batxW3xYCNAHTj8V0UcH2QIMuQkAuMGZgw1igNpyc","token_type":"bearer"}

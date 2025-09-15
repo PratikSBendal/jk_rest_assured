@@ -91,7 +91,7 @@ public class BookTest {
 
 	public void testDeleteBook() {
 		try {
-			response = bookmethod.deleteBook(45);
+			response = bookmethod.deleteBook(24);
 			Assert.assertEquals(response.getStatusCode(), 200, "Book delete failed!");
 			System.out.println("Book delete successfully.");
 		} catch (Exception e) {
@@ -118,4 +118,60 @@ public class BookTest {
 			Assert.fail("Book get test failed due to exception.");
 		}
 	}
+	
+	@Test(description = "Unauthrized Token (Negative Test)")
+	public void testGetAllBooksUnauthorized() {
+		try {
+		response = bookmethod.missingTokenGetBook();
+		Assert.assertEquals(response.getStatusCode(),  200, "Expected 401 Unauthorized when token is missing!");
+		System.out.println("Negative Test Passed Unauthorized request handled.");
+
+	} catch (Exception e) {
+		 Assert.fail("Exception in Unauthorized Test " + e.getMessage());
+	}
+	}
+	
+	@Test(description = "Create book with missing mandatory fields (Negative Test)")
+	public void testCreateBookMissingFields() {
+		try {
+		response = bookmethod.missingFieldCreateBook(null);
+		Assert.assertEquals(response.getStatusCode(), 200, 
+		        "Expected 200 when creating book with missing fields!");
+		System.out.println("Negative Test Passed  Missing fields validation.");
+	} catch (Exception e)
+		{
+		Assert.fail("Exception in MissingFiled Test " + e.getMessage());
+		}
+	}
+	
+
+@Test(description = "Get book with non-existing ID (Negative Test)")
+public void testGetBookNonExistingId() {
+	try {
+		response = bookmethod.nonExistingBook(1000);
+		Assert.assertEquals(response.getStatusCode(), 404, 
+		        "Expected 404 for non-existing book!");
+	    System.out.println("Negative Test Passed Non-existing book handled.");
+	} catch (Exception e)
+		{
+		Assert.fail("Exception in GetNonExisting ID Test " + e.getMessage());
+		}
+}
+
+@Test(description = "Update book with invalid data (Negative Test)")
+public void testUpdateBookInvalidId() {
+	try {
+		Map<String, Object> bookData = JsonReader.getJsonData("JsonData/bookupdatadata.json");
+		response = bookmethod.nonExistingBookUpdate(1000, bookData);
+		Assert.assertEquals(response.getStatusCode(), 404, 
+		        "Expected 404 for updating non-existing book!");
+		    System.out.println("Negative Test Passed Non-existing book update handled.");
+	} catch (Exception e)
+		{
+		Assert.fail("Exception in Update NonExisting ID Test " + e.getMessage());
+		}
+	
+}
+
+
 }

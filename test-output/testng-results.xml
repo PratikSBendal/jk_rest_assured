@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="15" passed="14" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-13T20:42:28 IST" name="RegressionSuite" finished-at="2025-09-13T20:42:32 IST" duration-ms="4166">
+  <suite started-at="2025-09-15T14:38:20 IST" name="RegressionSuite" finished-at="2025-09-15T14:38:24 IST" duration-ms="4297">
     <groups>
     </groups>
-    <test started-at="2025-09-13T20:42:28 IST" name="Test" finished-at="2025-09-13T20:42:32 IST" duration-ms="4166">
+    <test started-at="2025-09-15T14:38:20 IST" name="Test" finished-at="2025-09-15T14:38:24 IST" duration-ms="4297">
       <class name="APITest.DefaultTest">
-        <test-method signature="testGetHealth()[pri:0, instance:APITest.DefaultTest@4d1bf319]" started-at="2025-09-13T20:42:31 IST" name="testGetHealth" description="Health Check" finished-at="2025-09-13T20:42:31 IST" duration-ms="104" status="PASS">
+        <test-method signature="testGetHealth()[pri:0, instance:APITest.DefaultTest@673fdbce]" started-at="2025-09-15T14:38:23 IST" name="testGetHealth" description="Health Check" finished-at="2025-09-15T14:38:23 IST" duration-ms="122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetHealth -->
-        <test-method signature="testSignTokengen()[pri:0, instance:APITest.DefaultTest@4d1bf319]" started-at="2025-09-13T20:42:31 IST" name="testSignTokengen" description="Token Gen SignIn" finished-at="2025-09-13T20:42:32 IST" duration-ms="314" status="PASS">
+        <test-method signature="testGetHealthInvalidEndpoint()[pri:0, instance:APITest.DefaultTest@673fdbce]" started-at="2025-09-15T14:38:23 IST" name="testGetHealthInvalidEndpoint" description="Health Check - Invalid Endpoint" finished-at="2025-09-15T14:38:23 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetHealthInvalidEndpoint -->
+        <test-method signature="testSignTokengen()[pri:0, instance:APITest.DefaultTest@673fdbce]" started-at="2025-09-15T14:38:23 IST" name="testSignTokengen" description="Token Gen SignIn" finished-at="2025-09-15T14:38:23 IST" duration-ms="293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSignTokengen -->
-        <test-method signature="testSignUp()[pri:0, instance:APITest.DefaultTest@4d1bf319]" started-at="2025-09-13T20:42:32 IST" name="testSignUp" description="Signup Test" finished-at="2025-09-13T20:42:32 IST" duration-ms="31" status="FAIL">
+        <test-method signature="testSignTokengenWrongData()[pri:0, instance:APITest.DefaultTest@673fdbce]" started-at="2025-09-15T14:38:23 IST" name="testSignTokengenWrongData" description="Login with Wrong Password" finished-at="2025-09-15T14:38:23 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignTokengenWrongData -->
+        <test-method signature="testSignUp()[pri:0, instance:APITest.DefaultTest@673fdbce]" started-at="2025-09-15T14:38:23 IST" name="testSignUp" description="Signup Test" finished-at="2025-09-15T14:38:23 IST" duration-ms="27" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[SignUp failed! expected [200] but found [400]]]>
@@ -61,29 +69,49 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSignUp -->
+        <test-method signature="testSignUpMissingField()[pri:0, instance:APITest.DefaultTest@673fdbce]" started-at="2025-09-15T14:38:23 IST" name="testSignUpMissingField" description="SignUp with Missing Field" finished-at="2025-09-15T14:38:24 IST" duration-ms="305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignUpMissingField -->
       </class> <!-- APITest.DefaultTest -->
       <class name="APITest.BookTest">
-        <test-method is-config="true" signature="setupAuth()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:28 IST" name="setupAuth" finished-at="2025-09-13T20:42:31 IST" duration-ms="3381" status="PASS">
+        <test-method is-config="true" signature="setupAuth()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:20 IST" name="setupAuth" finished-at="2025-09-15T14:38:23 IST" duration-ms="3063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAuth -->
-        <test-method signature="testCreateBook()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testCreateBook" description="Create a new book" finished-at="2025-09-13T20:42:32 IST" duration-ms="58" status="PASS">
+        <test-method signature="testCreateBook()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testCreateBook" description="Create a new book" finished-at="2025-09-15T14:38:24 IST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateBook -->
-        <test-method signature="testGetAllBooks()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testGetAllBooks" description="Fetch all books" finished-at="2025-09-13T20:42:32 IST" duration-ms="21" status="PASS">
+        <test-method signature="testCreateBookMissingFields()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testCreateBookMissingFields" description="Create book with missing mandatory fields (Negative Test)" finished-at="2025-09-15T14:38:24 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBookMissingFields -->
+        <test-method signature="testGetAllBooks()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testGetAllBooks" description="Fetch all books" finished-at="2025-09-15T14:38:24 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetAllBooks -->
-        <test-method signature="testGetBook()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testGetBook" description="Get Book" finished-at="2025-09-13T20:42:32 IST" duration-ms="30" status="PASS">
+        <test-method signature="testGetAllBooksUnauthorized()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testGetAllBooksUnauthorized" description="Unauthrized Token (Negative Test)" finished-at="2025-09-15T14:38:24 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllBooksUnauthorized -->
+        <test-method signature="testGetBook()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testGetBook" description="Get Book" finished-at="2025-09-15T14:38:24 IST" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetBook -->
-        <test-method signature="testUpdateBook()[pri:0, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testUpdateBook" description="Update Book" finished-at="2025-09-13T20:42:32 IST" duration-ms="31" status="PASS">
+        <test-method signature="testGetBookNonExistingId()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testGetBookNonExistingId" description="Get book with non-existing ID (Negative Test)" finished-at="2025-09-15T14:38:24 IST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBookNonExistingId -->
+        <test-method signature="testUpdateBook()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testUpdateBook" description="Update Book" finished-at="2025-09-15T14:38:24 IST" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateBook -->
-        <test-method signature="testDeleteBook()[pri:5, instance:APITest.BookTest@1a4927d6]" started-at="2025-09-13T20:42:32 IST" name="testDeleteBook" description="Delete Book" finished-at="2025-09-13T20:42:32 IST" duration-ms="30" status="PASS">
+        <test-method signature="testUpdateBookInvalidId()[pri:0, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testUpdateBookInvalidId" description="Update book with invalid data (Negative Test)" finished-at="2025-09-15T14:38:24 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateBookInvalidId -->
+        <test-method signature="testDeleteBook()[pri:5, instance:APITest.BookTest@6b09fb41]" started-at="2025-09-15T14:38:24 IST" name="testDeleteBook" description="Delete Book" finished-at="2025-09-15T14:38:24 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteBook -->
