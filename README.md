@@ -57,21 +57,6 @@ Update Book (Valid ID & Data)
 
 Delete Book (Valid ID) 
 
-
-📊 Reporting
-
-Allure captures:
-
-Request body
-
-Response body
-
-Test status (pass/fail)
-
-After execution, reports are available in:
-
-target/allure-results
-
 Negative Test Cases
 Default API
 
@@ -90,6 +75,20 @@ Create Book (Missing Field)
 Get Book by ID (Invalid ID)
 
 Update Book (Invalid ID)  
+
+📊 Reporting
+
+Allure captures:
+
+Request body
+
+Response body
+
+Test status (pass/fail)
+
+After execution, reports are available in:
+
+target/allure-results
 
 
 To generate the report:
