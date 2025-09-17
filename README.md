@@ -95,12 +95,4 @@ To generate the report:
 
 allure serve target/allure-results
 
-🔮 Future Enhancements
 
-Add DataProvider for multiple book/user test cases
-
-Add Parallel Execution support with TestNG
-
-Integrate with CI/CD pipelines (Jenkins/GitHub Actions)
-
-Extend framework for additional APIs
