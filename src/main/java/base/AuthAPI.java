@@ -61,7 +61,7 @@ public class AuthAPI {
 			createUser(userData); 
 			return genrateToken(userData);
 		} catch (Exception e) {
-			System.out.println("⚠️ Exception in getOrCreateToken: " + e.getMessage());
+			System.out.println("Exception in getOrCreateToken: " + e.getMessage());
 			return null;
 		}
 	}
