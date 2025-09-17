@@ -35,7 +35,7 @@ public class RequestBuilder {
 			}
 
 		} catch (Exception e) {
-			System.out.println("⚠️ Failed to build request specification: " + e.getMessage());
+			System.out.println("Failed to build request specification: " + e.getMessage());
 
 		}
 		return builder.build();
